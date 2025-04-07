@@ -1,10 +1,80 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaPhone, FaClock, FaMapMarkerAlt, FaBaby, FaStethoscope } from 'react-icons/fa'
+import Script from 'next/script'
 
 export default function Home() {
   return (
     <>
+      <Script id="schema-medical-organization" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "ООО Центр современной медицины - УЗИ для беременных в Махачкале",
+        "url": "https://uzi05.ru",
+        "logo": "https://uzi05.ru/child.jpeg",
+        "description": "Профессиональное УЗИ для беременных в Махачкале. 3D/4D УЗИ плода, скрининг, допплерометрия.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Гоголя 42",
+          "addressLocality": "Махачкала",
+          "postalCode": "367000",
+          "addressCountry": "RU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.9784901,
+          "longitude": 47.4875490
+        },
+        "telephone": "+79882681666",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:30",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:30",
+            "closes": "13:00"
+          }
+        ],
+        "medicalSpecialty": ["Obstetrics", "Gynecology", "Medical Imaging"],
+        "serviceType": "УЗИ диагностика для беременных",
+        "priceRange": "$$"
+      })}} />
+
+      <Script id="schema-person-1" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Алиева Шехеризада Расуловна",
+        "jobTitle": "Врач ультразвуковой диагностики, врач высшей категории",
+        "description": "Врач УЗИ высшей категории с 36-летним стажем работы",
+        "worksFor": {
+          "@type": "MedicalBusiness",
+          "name": "ООО Центр современной медицины"
+        },
+        "medicalSpecialty": ["Obstetrics", "Gynecology", "Medical Imaging"],
+        "telephone": "+79882681666",
+        "url": "https://uzi05.ru/certificates-alieva"
+      })}} />
+
+      <Script id="schema-person-2" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Салихова Тамара Руслановна",
+        "jobTitle": "Врач ультразвуковой диагностики, кандидат медицинских наук",
+        "description": "Врач УЗИ, кандидат медицинских наук со стажем работы 13 лет",
+        "worksFor": {
+          "@type": "MedicalBusiness",
+          "name": "ООО Центр современной медицины"
+        },
+        "medicalSpecialty": ["Obstetrics", "Gynecology", "Medical Imaging"],
+        "telephone": "+79288051163",
+        "url": "https://uzi05.ru/certificates-salihova"
+      })}} />
+
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-sky-50 py-8">

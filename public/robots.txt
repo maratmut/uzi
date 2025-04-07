@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Разрешаем индексировать все страницы и директории
+Disallow:
+
+# Указываем путь к карте сайта
+Sitemap: https://uzi05.ru/sitemap.xml
+
+# Настройки для Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Настройки для Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
