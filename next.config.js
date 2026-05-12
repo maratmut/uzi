@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
+    trailingSlash: true,
     images: {
         unoptimized: true
     },
-    // Отключаем middleware для статической экспортации
     skipMiddlewareUrlNormalize: true,
     skipTrailingSlashRedirect: true
 }
