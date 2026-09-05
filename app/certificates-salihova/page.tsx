@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import { FaArrowLeft } from 'react-icons/fa'
-import { Metadata } from 'next'
+import { createPageMetadata } from '@/app/seo'
 
-export const metadata: Metadata = {
-  title: 'Салихова Тамара Руслановна - Врач УЗИ в Махачкале | Кандидат медицинских наук',
-  description: 'Кандидат медицинских наук со стажем работы 13 лет. Специалист по УЗИ беременных, эхокардиографии и нейросонографии плода. Смотрите сертификаты и квалификацию врача. Запись на приём в Махачкале.',
-  keywords: 'УЗИ в Махачкале, врач УЗИ Салихова, эхокардиография плода, нейросонография, допплерометрия, скрининг беременных',
-}
+export const metadata = createPageMetadata(
+  'Салихова Тамара Руслановна — врач УЗИ в Махачкале',
+  'Квалификация, опыт и сертификаты врача ультразвуковой диагностики Салиховой Тамары Руслановны. Запись на УЗИ в Махачкале.',
+  '/certificates-salihova/',
+)
 
 export default function CertificatesSalihova() {
   return (

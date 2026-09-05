@@ -1,10 +1,11 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
+import { createPageMetadata } from '@/app/seo'
 
-export const metadata: Metadata = {
-  title: 'Галерея УЗИ изображений',
-  description: 'Примеры УЗИ изображений будущих малышей. Первая встреча с вашим ребенком на современном оборудовании экспертного класса.',
-}
+export const metadata = createPageMetadata(
+  'Галерея УЗИ-изображений — Центр современной медицины',
+  'Примеры УЗИ-изображений, полученных в Центре современной медицины в Махачкале.',
+  '/gallery/',
+)
 
 export default function GalleryPage() {
   return (

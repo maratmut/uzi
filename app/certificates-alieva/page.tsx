@@ -1,13 +1,12 @@
 import Link from 'next/link'
 import { FaArrowLeft } from 'react-icons/fa'
-import { Metadata } from 'next'
+import { createPageMetadata } from '@/app/seo'
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://uzi05.ru'),
-  title: 'Алиева Шехеризада Расуловна - Узи для беременных в Махачкале | Врач УЗИ высшей категории',
-  description: 'Врач УЗИ высшей категории с 36-летним стажем работы. Эксперт в пренатальной диагностике, член Российской ассоциации специалистов УЗД. Сертификаты, квалификация и образование. Запись на УЗИ в Махачкале.',
-  keywords: 'УЗИ для беременных Махачкала, врач УЗИ Алиева, пренатальная диагностика, 3D/4D УЗИ плода, скрининг при беременности',
-}
+export const metadata = createPageMetadata(
+  'Алиева Шехеризада Расуловна — врач УЗИ в Махачкале',
+  'Квалификация, опыт и сертификаты врача ультразвуковой диагностики Алиевой Шехеризады Расуловны. Запись на УЗИ в Махачкале.',
+  '/certificates-alieva/',
+)
 
 export default function Certificates() {
   return (

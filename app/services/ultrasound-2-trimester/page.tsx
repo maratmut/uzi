@@ -1,12 +1,12 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { createPageMetadata } from '@/app/seo'
 
-export const metadata: Metadata = {
-  title: 'УЗИ скрининг 2 триместра в Махачкале | УЗИ для беременных',
-  description: 'Профессиональное УЗИ 2 триместра (скрининг) в Махачкале. Детальное изучение анатомии плода. Прием ведут опытные врачи Тамара Салихова и Шехеризада Расуловна.',
-  keywords: 'узи беременности в Махачкале, узи для беременных в махачкале, скрининг 2 триместра, узи Тамара Салихова, узи Шехеризада Расуловна',
-}
+export const metadata = createPageMetadata(
+  'Скрининг 2 триместра в Махачкале — УЗИ беременности',
+  'Скрининг 2 триместра в Махачкале: оценка анатомии и развития плода, плаценты и околоплодных вод. Запись к специалистам УЗД.',
+  '/services/ultrasound-2-trimester/',
+)
 
 export default function Ultrasound2TrimesterPage() {
   return (
@@ -62,7 +62,7 @@ export default function Ultrasound2TrimesterPage() {
               Исследование обычно проводится на сроке 19–21 неделя. Это оптимальное время, когда размеры плода и количество околоплодных вод позволяют врачу детально рассмотреть все органы и системы:
             </p>
             <ul className="list-disc pl-6 space-y-3 text-gray-600 mb-8">
-              <li><strong>Головной мозг и лицо:</strong> исключаем пороки развития, смотрим профиль, губки.</li>
+              <li><strong>Головной мозг и лицо:</strong> оцениваем видимые структуры, профиль и губы.</li>
               <li><strong>Сердце:</strong> оцениваем камеры сердца, крупные сосуды, ритм.</li>
               <li><strong>Позвоночник и конечности:</strong> пересчитываем пальчики, смотрим структуру костей.</li>
               <li><strong>Внутренние органы:</strong> почки, желудок, кишечник, легкие.</li>
@@ -73,7 +73,7 @@ export default function Ultrasound2TrimesterPage() {
               Где сделать узи беременности в Махачкале?
             </h2>
             <p className="text-gray-600 mb-6">
-              Выбор клиники для второго скрининга критически важен. От квалификации врача и качества аппаратуры зависит точность диагноза. Наш центр предлагает <strong>узи для беременных в Махачкале</strong> на уровне мировых стандартов.
+              Для второго скрининга важны квалификация специалиста и возможности ультразвукового аппарата. В центре исследование проводят врачи УЗД на аппарате Voluson Expert 22.
             </p>
 
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
@@ -86,7 +86,7 @@ export default function Ultrasound2TrimesterPage() {
               </li>
               <li className="bg-rose-50 p-4 rounded-xl">
                 <strong className="block text-gray-900 text-lg mb-1">Аппарат Voluson E22</strong>
-                <span className="text-gray-600">Мы работаем на лучшем в мире оборудовании для акушерства и гинекологии. Технологии 3D/4D позволяют увидеть лицо малыша в мельчайших подробностях уже на этом сроке.</span>
+                <span className="text-gray-600">Аппарат Voluson Expert 22 поддерживает режимы акушерского УЗИ и 3D/4D-визуализации.</span>
               </li>
             </ul>
 

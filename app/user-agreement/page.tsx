@@ -1,10 +1,11 @@
 import React from 'react';
-import { Metadata } from 'next';
+import { createPageMetadata } from '@/app/seo';
 
-export const metadata: Metadata = {
-  title: 'Пользовательское соглашение',
-  description: 'Пользовательское соглашение об использовании сайта и обработке персональных данных.',
-};
+export const metadata = createPageMetadata(
+  'Пользовательское соглашение — uzi05.ru',
+  'Пользовательское соглашение об использовании сайта uzi05.ru и обработке персональных данных.',
+  '/user-agreement/',
+);
 
 export default function UserAgreementPage() {
   return (

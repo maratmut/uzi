@@ -29,6 +29,9 @@ export default function Header() {
             <Link href="/services" className="text-gray-700 hover:text-rose-500 transition-colors">
               Услуги
             </Link>
+            <Link href="/services/gynecological-examination/" className="text-gray-700 hover:text-rose-500 transition-colors">
+              Гинекологическое УЗИ
+            </Link>
             <Link href="/team" className="text-gray-700 hover:text-rose-500 transition-colors">
               Специалисты
             </Link>
@@ -64,6 +67,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Услуги
+              </Link>
+              <Link
+                href="/services/gynecological-examination/"
+                className="text-gray-700 hover:text-rose-500 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Гинекологическое УЗИ
               </Link>
               <Link 
                 href="/team" 

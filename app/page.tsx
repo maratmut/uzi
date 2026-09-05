@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import BabyScene from '@/components/BabyScene'
 import Link from 'next/link'
 import { FaPhone, FaClock, FaMapMarkerAlt } from 'react-icons/fa'
 import Script from 'next/script'
@@ -80,21 +80,13 @@ export default function Home() {
         <section className="bg-gradient-to-b from-rose-50 to-white py-16">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
-              <div className="hidden md:block w-full md:w-1/2 relative h-[200px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
-                <Image
-                  src="/child.jpeg"
-                  alt="УЗИ для беременных"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+              <BabyScene />
               <div className="w-full md:w-1/2 flex flex-col items-start">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Экспертное УЗИ беременности и гинекологии
+                  УЗИ при беременности и гинекологическое УЗИ в Махачкале
                 </h1>
                 <p className="text-lg text-gray-600 mb-8">
-                  Современное УЗИ диагностика в Махачкале в атмосфере заботы и спокойствия для будущих мам.
+                  Скрининги 1–3 триместров, 3D/4D УЗИ, допплерометрия и исследования органов малого таза на аппарате Voluson Expert 22. Центр находится на ул. Гоголя, 42.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 w-full">
                   <div className="flex flex-col gap-3 flex-1">
@@ -134,6 +126,38 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-12">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-6xl">
+              <div className="mb-10 text-center">
+                <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">УЗИ-исследования в центре</h2>
+                <p className="mx-auto max-w-3xl text-gray-600">
+                  Выберите нужное направление. Рекомендуемый срок, способ проведения и подготовку к исследованию уточняйте при записи.
+                </p>
+              </div>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {[
+                  ['Скрининг 1 триместра', '/services/ultrasound-1-trimester/'],
+                  ['Скрининг 2 триместра', '/services/ultrasound-2-trimester/'],
+                  ['Скрининг 3 триместра', '/services/ultrasound-3-trimester/'],
+                  ['3D/4D УЗИ при беременности', '/services/3d-4d-ultrasound/'],
+                  ['Допплерометрия при беременности', '/services/dopplerometry/'],
+                  ['Гинекологическое УЗИ', '/services/gynecological-examination/'],
+                ].map(([title, href]) => (
+                  <Link key={href} href={href} className="rounded-2xl border-2 border-rose-100 bg-rose-50 p-6 text-center text-lg font-semibold text-gray-900 transition hover:border-rose-200 hover:shadow-md">
+                    {title}
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <Link href="/services/" className="inline-block rounded-full bg-rose-400 px-8 py-3 font-medium text-white transition-colors hover:bg-rose-500">
+                  Все УЗИ-исследования
+                </Link>
               </div>
             </div>
           </div>

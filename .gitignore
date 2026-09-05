@@ -15,6 +15,7 @@
 
 # production
 /build
+/timeweb-upload.zip
 
 # misc
 .DS_Store

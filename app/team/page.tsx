@@ -1,12 +1,13 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FaPhone } from 'react-icons/fa'
+import { createPageMetadata } from '@/app/seo'
 
-export const metadata: Metadata = {
-  title: 'Наша команда врачей УЗИ',
-  description: 'Опытные врачи ультразвуковой диагностики в Махачкале. Алиева Шехеризада Расуловна и Салихова Тамара Руслановна - специалисты высшей категории.',
-}
+export const metadata = createPageMetadata(
+  'Врачи УЗИ в Махачкале — Алиева и Салихова',
+  'Врачи ультразвуковой диагностики в Махачкале: Алиева Шехеризада Расуловна и Салихова Тамара Руслановна. Опыт, специализация и запись.',
+  '/team/',
+)
 
 export default function TeamPage() {
   return (
