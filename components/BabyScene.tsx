@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import styles from './BabyScene.module.css'
 
 // Image-based relief, not an anatomical model. Landmarks are registered to
-// public/child.jpeg (1370 x 1148); replace them if the illustration changes.
+// public/child.webp (1370 x 1148); replace them if the illustration changes.
 const vertexShader = /* glsl */ `
   uniform float uTime;
   uniform float uActivity;
@@ -120,7 +120,7 @@ export default function BabyScene() {
         const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10)
         camera.position.z = 4
         const geometry = new THREE.PlaneGeometry(1370 / 1148 * 2, 2, 160, 136)
-        const texture = new THREE.TextureLoader().load('/child.jpeg', () => {
+        const texture = new THREE.TextureLoader().load('/child.webp', () => {
           if (disposed) return
           texture.colorSpace = THREE.SRGBColorSpace
           texture.needsUpdate = true
@@ -285,7 +285,7 @@ export default function BabyScene() {
           }
         }}
       >
-        <Image src="/child.jpeg" alt="Малыш в утробе — иллюстрация в золотистых тонах" fill priority sizes="(max-width: 767px) 100vw, 536px" className={styles.poster} />
+        <Image src="/child.webp" alt="Малыш в утробе — иллюстрация в золотистых тонах" fill priority sizes="(max-width: 767px) 100vw, 536px" className={styles.poster} />
         <canvas ref={canvasRef} className={styles.canvas} data-ready={ready} aria-hidden="true" />
       </button>
       <p id="baby-animation-hint" className={styles.hint}>

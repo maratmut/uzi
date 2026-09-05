@@ -33,7 +33,7 @@ export default function GalleryPage() {
               <div className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                 <Image
-                  src="/child.jpeg"
+                  src="/child.webp"
                   alt="УЗИ изображение малыша"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
@@ -44,7 +44,7 @@ export default function GalleryPage() {
               <div className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                 <Image
-                  src="/child.jpeg"
+                  src="/child.webp"
                   alt="3D УЗИ изображение"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
@@ -55,7 +55,7 @@ export default function GalleryPage() {
               <div className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                 <Image
-                  src="/child.jpeg"
+                  src="/child.webp"
                   alt="4D УЗИ малыша в движении"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
@@ -66,7 +66,7 @@ export default function GalleryPage() {
               <div className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                 <Image
-                  src="/child.jpeg"
+                  src="/child.webp"
                   alt="УЗИ изображение лица ребенка"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
@@ -77,7 +77,7 @@ export default function GalleryPage() {
               <div className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                 <Image
-                  src="/child.jpeg"
+                  src="/child.webp"
                   alt="3D УЗИ профиль малыша"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
@@ -88,7 +88,7 @@ export default function GalleryPage() {
               <div className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                 <Image
-                  src="/child.jpeg"
+                  src="/child.webp"
                   alt="УЗИ изображение ручки малыша"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"

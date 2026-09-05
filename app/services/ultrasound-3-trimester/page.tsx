@@ -40,7 +40,7 @@ export default function Ultrasound3TrimesterPage() {
             </div>
             <div className="hidden md:block w-full md:w-1/2 relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/child.jpeg"
+                src="/child.webp"
                 alt="УЗИ III триместра беременности"
                 fill
                 className="object-cover"

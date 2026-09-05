@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { createPageMetadata } from '@/app/seo'
 
 export const metadata = createPageMetadata(
@@ -7,62 +8,88 @@ export const metadata = createPageMetadata(
   '/services/',
 )
 
-const pregnancyServices = [
+type Service = {
+  title: string
+  description: string
+  href: string
+  image?: string
+}
+
+const pregnancyServices: Service[] = [
   {
     title: 'УЗИ на ранних сроках беременности',
     description: 'Уточнение локализации и срока беременности, оценка развития по назначению врача.',
     href: '/services/early-pregnancy-ultrasound/',
+    image: '/images/services/early-pregnancy-ultrasound.webp',
   },
   {
     title: 'Скрининг 1 триместра',
     description: 'Оценка развития плода и маркеров первого триместра.',
     href: '/services/ultrasound-1-trimester/',
+    image: '/images/services/ultrasound-1-trimester.webp',
   },
   {
     title: 'Скрининг 2 триместра',
     description: 'Оценка анатомии и развития плода, плаценты и околоплодных вод.',
     href: '/services/ultrasound-2-trimester/',
+    image: '/images/services/ultrasound-2-trimester.webp',
   },
   {
     title: 'Скрининг 3 триместра',
     description: 'Оценка роста и положения плода, плаценты и других показателей.',
     href: '/services/ultrasound-3-trimester/',
+    image: '/images/services/ultrasound-3-trimester.webp',
   },
   {
     title: '3D/4D УЗИ при беременности',
     description: 'Объемное изображение плода; возможность фото и видео уточняется при записи.',
     href: '/services/3d-4d-ultrasound/',
+    image: '/images/services/3d-4d-ultrasound.webp',
   },
   {
     title: 'Допплерометрия при беременности',
     description: 'Оценка показателей кровотока в сосудах матки, плаценты и плода.',
     href: '/services/dopplerometry/',
+    image: '/images/services/dopplerometry.webp',
   },
 ]
 
-const gynecologyServices = [
+const gynecologyServices: Service[] = [
   {
     title: 'Гинекологическое УЗИ',
     description: 'Исследование матки, яичников и придатков трансабдоминально или трансвагинально.',
     href: '/services/gynecological-examination/',
+    image: '/images/services/gynecological-examination.webp',
   },
   {
     title: 'УЗИ органов малого таза',
     description: 'Ультразвуковая оценка матки, эндометрия, яичников и придатков.',
     href: '/services/pelvic-ultrasound/',
+    image: '/images/services/pelvic-ultrasound.webp',
   },
   {
     title: 'Фолликулометрия',
     description: 'Ультразвуковой мониторинг роста фолликулов и овуляции.',
     href: '/services/folliculometry/',
+    image: '/images/services/folliculometry.webp',
   },
 ]
 
-function ServiceGrid({ services }: { services: typeof pregnancyServices }) {
+function ServiceGrid({ services }: { services: Service[] }) {
   return (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {services.map((service) => (
         <article key={service.href} className="flex h-full flex-col rounded-2xl border-2 border-rose-100 bg-white p-7 transition-shadow hover:shadow-lg">
+          {service.image && (
+            <Image
+              src={service.image}
+              alt={`Иллюстрация услуги «${service.title}»`}
+              width={960}
+              height={640}
+              className="mb-6 aspect-[3/2] w-full rounded-xl object-cover"
+              sizes="(min-width: 1024px) 304px, (min-width: 768px) 45vw, 90vw"
+            />
+          )}
           <h3 className="mb-3 text-2xl font-bold text-gray-900">{service.title}</h3>
           <p className="mb-6 flex-1 leading-relaxed text-gray-600">{service.description}</p>
           <Link

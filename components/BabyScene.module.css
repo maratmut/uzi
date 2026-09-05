@@ -1,6 +1,8 @@
 .wrapper {
   width: 100%;
+  max-width: 480px;
   min-width: 0;
+  justify-self: center;
 }
 
 .scene {
@@ -58,9 +60,4 @@
 @media (hover: none) {
   .mouseHint { display: none; }
   .touchHint { display: inline; }
-}
-
-@media (min-width: 768px) {
-  .wrapper { width: 50%; }
-  .scene { height: 400px; aspect-ratio: auto; }
 }

@@ -35,7 +35,7 @@ export default function TeamPage() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="relative h-[400px] md:h-auto">
                   <Image
-                    src="/no-image2.png"
+                    src="/no-image2.webp"
                     alt="Алиева Шехеризада Расуловна - Врач УЗИ высшей категории"
                     fill
                     className="object-cover"
@@ -175,7 +175,7 @@ export default function TeamPage() {
                 </div>
                 <div className="relative h-[400px] md:h-auto order-1 md:order-2">
                   <Image
-                    src="/tamara-salihova.png"
+                    src="/tamara-salihova.webp"
                     alt="Салихова Тамара Руслановна - Врач УЗИ, кандидат медицинских наук"
                     fill
                     className="object-cover object-top"
